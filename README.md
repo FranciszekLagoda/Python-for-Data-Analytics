@@ -79,18 +79,40 @@ for i, job_title in enumerate(job_list):
 plt.show()
 ```
 ### Results
-![Visualisation of the top skills](images\skills_demand.png)
+![Visualization of the top skills](images\skills_demand.png)
 
 ### Insights
-1. SQL
- * Insight: SQL is a foundational skill vital for **data querying**, management, and manipulation, highlighting its universal importance across all roles that require data handling.
-2. Excel
-Insight: Excel remains a critical tool for **data analysis** and **reporting**, emphasizing its continued relevance in data-centric roles.
-3. Python
-* Insight: Python’s significance reflects a growing trend toward programming-based analysis and **automation**, particularly in **advanced analytics** and machine learning.
-4. Power BI & Tableau
-* Insight: Power BI's and Tableau use underscores the importance of **data visualization** tools for transforming raw data into **actionable insights**.
-5. R
-* Insight: R’s usage indicates **a niche** but essential skill for **statistical analysis** and **data modeling**, particularly in specialized analytical tasks.
-6. Cloud Platforms (Azure & AWS)
-* Insight: The rising need for cloud platforms illustrates the shift toward **scalable** data solutions and emphasizes the importance of **cloud-based** data processing skills.
+ * SQL is a foundational skill vital for **data querying**, management, and manipulation, highlighting its universal importance across all roles that require data handling.
+* Excel remains a critical tool for **data analysis** and **reporting**, emphasizing its continued relevance in data-centric roles.
+* Python’s significance reflects a growing trend toward programming-based analysis and **automation**, particularly in **advanced analytics** and machine learning.
+* Power BI's and Tableau use underscores the importance of **data visualization** tools for transforming raw data into **actionable insights**.
+R’s usage indicates **a niche** but essential skill for **statistical analysis** and **data modeling**, particularly in specialized analytical tasks.
+* The rising need for cloud platforms (Azure & AWS) illustrates the shift toward **scalable** data solutions and emphasizes the importance of **cloud-based** data processing skills.
+
+## 2. How are in-demand skills trending for Data Analysts?
+### Visualise Data
+```python
+sns.lineplot(data=df_plot, dashes=False, palette='tab10')
+sns.despine()
+#Change values to %
+from matplotlib.ticker import PercentFormatter
+ax = plt.gca()
+ax.yaxis.set_major_formatter(PercentFormatter(decimals=0))
+
+#Add data labels
+for skill in df_plot.columns:
+    plt.text(11.2, df_plot[skill].iloc[-1], skill)
+
+plt.show()
+```
+
+### Result
+![Visual](images\skills_trend.png)
+
+### Insights
+* SQL remains the most demanded skill, but we can see a gradual decrease in demand throughout the year.
+* Excel as a basic analytical tool remains in second position, but we can see a decreasing trend in the last year.
+* Python is becoming increasingly popular, almost catching up to Excel by the end of the year.
+* Both Tableau and Power BI are less demanded in Data Analyst job postings, but we can see a high percentage increase in demand for Power BI.
+* R is less popular than Python and does not show as dynamic a growth as its competitor.
+* In summary, all the most popular skills for Data Analytics seem to be viable to learn, but among coding languages, Python has an advantage.
