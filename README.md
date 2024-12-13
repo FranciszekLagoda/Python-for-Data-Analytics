@@ -79,7 +79,7 @@ for i, job_title in enumerate(job_list):
 plt.show()
 ```
 ### Results
-![Visualisation of the top skills](images\skills_demand.png)
+![Visualisation of the top skills](images/skills_demand.png)
 
 ### Insights
 1. SQL
