@@ -79,7 +79,7 @@ for i, job_title in enumerate(job_list):
 plt.show()
 ```
 ### Results
-![Visualization of the top skills](images\skills_demand.png)
+![Visualization of the top skills](images/skills_demand.png)
 
 ### Insights
  * SQL is a foundational skill vital for **data querying**, management, and manipulation, highlighting its universal importance across all roles that require data handling.
@@ -107,7 +107,7 @@ plt.show()
 ```
 
 ### Result
-![Visual](images\skills_trend.png)
+![Visual](images/skills_trend.png)
 
 ### Insights
 * SQL remains the most demanded skill, but we can see a gradual decrease in demand throughout the year.
