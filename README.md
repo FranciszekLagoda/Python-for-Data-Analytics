@@ -217,3 +217,20 @@ plt.show()
 * Basic Data Analyst and visualization tools (Tableau, Power BI, Excel) are popular in job postings but offer slightly smaller salaries compared to programming tools.
 * More advanced statistical tools like SAS and Spark are also popular, especially in certain industries, and learning them can be beneficial; Spark is the highest paying skill among the most popular ones.
 * Cloud technologies like AWS and Azure are top-paying skills, indicating the importance of cloud technologies in today’s world.
+
+# Final Results
+
+## Python TOP
+Python stays on top in almost every category. Because of its **versatility** in data analysis and other software tasks, learning Python is key to becoming a successful data analyst.
+
+## SQL Everywhere
+SQL is the **most demanded** skill for data analysts, both for advanced and beginner levels, and it is the main skill for every data analyst to learn when starting their career.
+
+## Cloud Equals Rich
+Cloud technologies like AWS and Azure are generally the **highest-paid** skills, making them essential to learn for career advancement.
+
+## Excel And Others
+Technologies like Excel, Power BI, and Tableau are still very popular, but they won't guarantee a successful career. They are good **starting points**, and learning them is rather the first step.
+
+## R - The Smaller Brother
+R is the second most popular programming language for a data analyst role after Python. However, due to its **lack of versatility** and lower popularity among software developers, it tends to occupy a lower-paid niche in particular companies or universities.
