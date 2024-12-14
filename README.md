@@ -49,12 +49,12 @@ df['job_posted_date'] = pd.to_datetime(df['job_posted_date'])
 df['job_skills'] = df['job_skills'].apply(lambda x: ast.literal_eval(x) if pd.notna(x) else x)
 ```
 
-## Filter Poland Jobs
-
-To focus my analysis on the Poland job market, I apply filters to the dataset, narrowing down to roles based in Poland.
+## Filter jobs of my interest
+To focus my analysis on the jobs that I am interested in i filtered data fot them:
 
 ```python
-df_PL = df[df['job_country'] == 'Poland']
+job_list=['Data Analyst', 'Business Analyst', 'Data Scientist']
+df_DA = df[df['job_title_short'].isin(job_list)]
 
 ```
 # The Analysis
