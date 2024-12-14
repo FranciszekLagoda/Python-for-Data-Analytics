@@ -90,7 +90,7 @@ R’s usage indicates **a niche** but essential skill for **statistical analysis
 * The rising need for cloud platforms (Azure & AWS) illustrates the shift toward **scalable** data solutions and emphasizes the importance of **cloud-based** data processing skills.
 
 ## 2. How are in-demand skills trending for Data Analysts?
-### Visualise Data
+### Visualize Data
 ```python
 sns.lineplot(data=df_plot, dashes=False, palette='tab10')
 sns.despine()
@@ -118,7 +118,7 @@ plt.show()
 * In summary, all the most popular skills for Data Analytics seem to be viable to learn, but among coding languages, Python has an advantage.
 
 ## What is a salary distribution for data roles?
-### Visualise data
+### Visualize data
 ```python
 # Plot data
 sns.boxplot(data=df_plot, x='salary_year_avg', y='job_title_short', order=job_order)
@@ -144,3 +144,37 @@ plt.show()
 * Data Scientist is the highest-paying role. Even junior data analyst can earn more than other roles. But Data Scientists roles have larger differences in salaries, reflecting greater variance in compensation as responsibilities increase.
 * Business analyst is the lowest-paying role and has the smallest number of clear outliers. It shows consistency in salaries and contrasts with other analyzed data jobs, where with more experience you can get much higher payment.
 * In summary, more experienced roles with higher technical skills have higher pay.
+
+## What are the highest-paying skills overall and among the most demanded skills?
+
+### Visualize data
+```python
+fig, ax = plt.subplots(2,1)
+
+# Plot highest paying skills
+sns.barplot(data=df_top_paying, x='skill_salary', y='job_skills', ax=ax[0], hue='skill_salary', palette='dark:b_r', legend=False)
+ax[0].set_xlim(0,180000)
+ax[0].xaxis.set_major_formatter(plt.FuncFormatter(lambda x, pos: f'${int(x/1000)}K'))
+
+# Plot most demanded skills
+sns.barplot(data=df_most_demanded, x='skill_salary', y='job_skills', ax=ax[1], hue='skill_salary', palette='dark:b_r', legend=False)
+ax[1].set_xlim(ax[0].get_xlim())
+ax[1].xaxis.set_major_formatter(plt.FuncFormatter(lambda x, pos: f'${int(x/1000)}K'))
+```
+
+### Result
+![vis](images\skills_vs_salary.png)
+
+### Insights
+#### Highest paying skills
+* The analysis reveals that high-paying skills for data analysts are very specific and largely centered around advanced machine learning frameworks, cloud computing, and programming capabilities. Individuals who can work with these technologies and frameworks, particularly in the context of AI and scalable applications, are likely to command higher salaries in the job market.
+
+#### Most demanded skills
+* The highest paying skills from most demanded skills are skills related to big data and cloud computing, such as Spark, AWS, and Azure. This indicates the growing importance of these technologies in data analytics.
+* Data programming languages like Python and R occupy high position on the list, highlighting their role as foundation tools in data analytics.
+* SQL remains an essential tool in data analytics because of its importance for working with databases
+* Skills related to SAS are popular in specific industries like pharmaceuticals and finance, which may influence their median salaries. This also shows how certain specialized skills can be more valued in particular contexts.
+* Microsoft basic data analytics tool like Excel and PowerBI are rather an entrance for higher paying roles.
+
+#### Summary
+There is a clear distinction between the skills that are high demanded and highest paid. Data analyst to reach his maximal potential should consider developing most of the most demanded skills but also include some highly specialized skills.
