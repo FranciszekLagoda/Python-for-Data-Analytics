@@ -90,6 +90,10 @@ R’s usage indicates **a niche** but essential skill for **statistical analysis
 * The rising need for cloud platforms (Azure & AWS) illustrates the shift toward **scalable** data solutions and emphasizes the importance of **cloud-based** data processing skills.
 
 ## 2. How are in-demand skills trending for Data Analysts?
+
+View my notebook with detailed steps here: [3_Skills_trend.ipynb](3_Skills_trend.ipynb).
+
+
 ### Visualize Data
 ```python
 sns.lineplot(data=df_plot, dashes=False, palette='tab10')
@@ -117,7 +121,9 @@ plt.show()
 * R is less popular than Python and does not show as dynamic a growth as its competitor.
 * In summary, all the most popular skills for Data Analytics seem to be viable to learn, but among coding languages, Python has an advantage.
 
-## What is a salary distribution for data roles?
+## 3. What is a salary distribution for data roles?
+View my notebook with detailed steps here: [4_Salary_Distribution.ipynb](4_Salary_Distribution.ipynb).
+
 ### Visualize data
 ```python
 # Plot data
@@ -145,8 +151,8 @@ plt.show()
 * Business analyst is the lowest-paying role and has the smallest number of clear outliers. It shows consistency in salaries and contrasts with other analyzed data jobs, where with more experience you can get much higher payment.
 * In summary, more experienced roles with higher technical skills have higher pay.
 
-## What are the highest-paying skills overall and among the most demanded skills?
-
+## 4. What are the highest-paying skills overall and among the most demanded skills?
+View my notebook with detailed steps here: [5_skills_vs_salary.ipynb](5_skills_vs_salary.ipynb).
 ### Visualize data
 ```python
 fig, ax = plt.subplots(2,1)
@@ -179,7 +185,8 @@ ax[1].xaxis.set_major_formatter(plt.FuncFormatter(lambda x, pos: f'${int(x/1000)
 #### Summary
 There is a clear distinction between the skills that are high demanded and highest paid. Data analyst to reach his maximal potential should consider developing most of the most demanded skills but also include some highly specialized skills.
 
-## What are the optimal skills to learn?
+## 5. What are the optimal skills to learn?
+View my notebook with detailed steps here: [6_Optimal_Skills.ipynb](6_Optimal_Skills.ipynb).
 
 ### Visualize data
 ```python
