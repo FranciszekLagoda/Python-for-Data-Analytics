@@ -137,7 +137,7 @@ plt.show()
 ```
 
 ### Result
-![vis](images\salary_distribution.png)
+![vis](images/salary_distribution.png)
 
 ### Insights
 * Senior roles generally have higher salaries.
@@ -163,7 +163,7 @@ ax[1].xaxis.set_major_formatter(plt.FuncFormatter(lambda x, pos: f'${int(x/1000)
 ```
 
 ### Result
-![vis](images\skills_vs_salary.png)
+![vis](images/skills_vs_salary.png)
 
 ### Insights
 #### Highest paying skills
@@ -178,3 +178,35 @@ ax[1].xaxis.set_major_formatter(plt.FuncFormatter(lambda x, pos: f'${int(x/1000)
 
 #### Summary
 There is a clear distinction between the skills that are high demanded and highest paid. Data analyst to reach his maximal potential should consider developing most of the most demanded skills but also include some highly specialized skills.
+
+## What are the optimal skills to learn?
+
+### Visualize data
+```python
+# Create a scatter plot
+sns.scatterplot(data=df_grouped, x='skill_percent', y='median_salary')
+sns.set_theme(style='ticks')
+
+# Format Axis
+from matplotlib.ticker import PercentFormatter
+ax=plt.gca()
+ax.xaxis.set_major_formatter(PercentFormatter(100))
+ax.yaxis.set_major_formatter(plt.FuncFormatter(lambda y, pos: f'${int(y/1000)}K'))
+
+# Add data labels
+from adjustText import adjust_text
+texts = []
+for i, txt in enumerate(df_grouped.index):
+    texts.append(plt.text(df_grouped['skill_percent'].iloc[i],df_grouped['median_salary'].iloc[i], txt))
+adjust_text(texts, arrowprops=dict(arrowstyle='-', color='gray'))
+
+plt.show()
+```
+### Result
+![viz](images/optimal_skills.png)
+
+### Insights
+* Programming tools like Python, SQL, and R are the best to learn because of their high popularity and relatively high salary.
+* Basic Data Analyst and visualization tools (Tableau, Power BI, Excel) are popular in job postings but offer slightly smaller salaries compared to programming tools.
+* More advanced statistical tools like SAS and Spark are also popular, especially in certain industries, and learning them can be beneficial; Spark is the highest paying skill among the most popular ones.
+* Cloud technologies like AWS and Azure are top-paying skills, indicating the importance of cloud technologies in today’s world.
