@@ -140,7 +140,7 @@ plt.show()
 ![vis](images\salary_distribution.png)
 
 ### Insights
-* Senior roles generally have higher salaries
-* Data Scientist is the highest-paying role. Even junior data analyst can earn more than other roles.
-* Business analyst is the lowest-paying roles.
+* Senior roles generally have higher salaries.
+* Data Scientist is the highest-paying role. Even junior data analyst can earn more than other roles. But Data Scientists roles have larger differences in salaries, reflecting greater variance in compensation as responsibilities increase.
+* Business analyst is the lowest-paying role and has the smallest number of clear outliers. It shows consistency in salaries and contrasts with other analyzed data jobs, where with more experience you can get much higher payment.
 * In summary, more experienced roles with higher technical skills have higher pay.
