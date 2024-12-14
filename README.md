@@ -116,3 +116,31 @@ plt.show()
 * Both Tableau and Power BI are less demanded in Data Analyst job postings, but we can see a high percentage increase in demand for Power BI.
 * R is less popular than Python and does not show as dynamic a growth as its competitor.
 * In summary, all the most popular skills for Data Analytics seem to be viable to learn, but among coding languages, Python has an advantage.
+
+## What is a salary distribution for data roles?
+### Visualise data
+```python
+# Plot data
+sns.boxplot(data=df_plot, x='salary_year_avg', y='job_title_short', order=job_order)
+sns.set_theme(style='ticks')
+
+#Format axes
+ax = plt.gca()
+ax.set_xlim(0,500000)
+ax.xaxis.set_major_formatter(plt.FuncFormatter(lambda x, pos: f'${int(x/1000)}K'))
+
+#Add labels
+plt.title('Salary distribution of jobs of my interest', fontsize=16)
+plt.xlabel('Salary year average')
+plt.ylabel('')
+plt.show()
+```
+
+### Result
+![vis](images\salary_distribution.png)
+
+### Insights
+* Senior roles generally have higher salaries
+* Data Scientist is the highest-paying role. Even junior data analyst can earn more than other roles.
+* Business analyst is the lowest-paying roles.
+* In summary, more experienced roles with higher technical skills have higher pay.
